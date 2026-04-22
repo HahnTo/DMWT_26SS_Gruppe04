@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+/*
+Tailwind CSS Klassen in Folie 25 aus Session 06
+Folie Session 06, 25: Tailwind CSS Klassen Beispiele
+Folie Session 06, 30: Tailwind CSS Grid Beispiele mit Breakpoints etc
+*/
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
