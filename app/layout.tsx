@@ -15,13 +15,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="de">
-      <body style={{backgroundColor: "#202532"}}>
-
-        <header>Navbar</header>
+      <body>
 
         <main>{children}</main> 
 
-        <footer>Footer</footer>
       </body>
     </html>
   );
