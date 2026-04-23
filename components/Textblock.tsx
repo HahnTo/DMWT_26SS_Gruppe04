@@ -1,5 +1,5 @@
 import React from "react"
-import { myFont } from "@/app/fonts"
+import { manrope, welcomeDarling } from "@/app/fonts"
 
 
 type TextblockProbs = {
@@ -9,7 +9,7 @@ type TextblockProbs = {
 export default function Textblock({ children }: TextblockProbs) {
     return (
         <div className="flex items-center justify-center h-auto p-10">
-            <p className="text-xl font-[myFont] text-white" >{children}</p>
+            <p className={`${manrope.className} text-xl text-white`} >{children}</p>
         </div>
     )
 }
