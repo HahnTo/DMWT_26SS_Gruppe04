@@ -1,5 +1,5 @@
 import React from "react"
-import myFont from "@/app/layout"
+import { myFont } from "@/app/fonts"
 
 
 type TextblockProbs = {

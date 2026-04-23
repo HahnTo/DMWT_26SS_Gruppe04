@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import localFont from 'next/font/local'
 
 
 export const metadata: Metadata = {
@@ -8,9 +7,6 @@ export const metadata: Metadata = {
   description: "Beschreibung",
 };
 
-const myFont = localFont({
-  src: './fonts/Welcome_Darling.otf',
-})
 
 export default function RootLayout({
   children,
