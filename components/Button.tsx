@@ -20,6 +20,7 @@ export default function Button ({ label, onClick, type, className}: ButtonProbs)
                 rounded-md 
                 transition-all 
                 hover:bg-[#363636] 
+                active:scale-95 
                 ${className}
             `}
             >
