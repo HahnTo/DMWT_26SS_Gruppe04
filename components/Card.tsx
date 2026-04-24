@@ -8,10 +8,15 @@ type CardProbs = {
 
 export default function Card({ title, children, img}: CardProbs) {
     return (
-        <div className="w-100 h-200 bg-black m-10 rounded-[20]">
-            <h1 className="content-center ">{title}</h1>
-            <img src={img} className="w-500 h-80" alt="Test"/>
+        <div className="w-1/3 h-150 flex-none bg-[#343842] border-1 border-[#525F80] m-10 rounded-[20] overflow-hidden">
+
+            <img src={img} className="w-full h-100 object-cover" alt="Test"/>
+
+            <p className="flex content-center justify-center p-2 text-[20px]">{title}</p>
+
             {children}
+
         </div>
     )
 }
+
