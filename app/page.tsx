@@ -1,3 +1,4 @@
+import Card from "@/components/Card";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Textblock from "@/components/Textblock";
@@ -18,6 +19,14 @@ export default function Home() {
       <section>
         <Textblock>Test</Textblock>
         <Textblock>Hallo</Textblock>
+      </section>
+      <section className="flex-row content-center p-5">
+        <Card
+          title="Card1"
+          img="/images/CardPlaceholder.png"
+        >
+          test
+        </Card>
       </section>
     </div>
   );

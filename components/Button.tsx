@@ -14,8 +14,7 @@ export default function Button ({ label, onClick, type, className}: ButtonProbs)
             onClick={onClick}
             className={`
                 px-6 py-2 
-                bg-[#5B657D] 
-                text-white 
+                bg-[#5B657D]  
                 font-semibold 
                 rounded-md 
                 transition-all 
