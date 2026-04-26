@@ -4,7 +4,8 @@ import Hero from "@/components/Hero";
 import HorizontalScrollSection from "@/components/HorizontalScrollSection";
 import Textblock from "@/components/Textblock";
 import Image from "next/image";
-
+import Footer from "@/components/Footer";
+import Fakeflix from "@/components/FakeFlix";
 // Folie Session 06, 41: Beispiel mit refs zum Scrollen zu ...
 
 
@@ -69,6 +70,13 @@ export default function Home() {
           </Card>
         </HorizontalScrollSection>
       </section>
+      <section>
+        <Fakeflix></Fakeflix>
+      </section>
+      <section>
+        <Textblock>Concluding Text</Textblock>
+      </section>
+      <Footer></Footer>
     </div>
   );
 }
