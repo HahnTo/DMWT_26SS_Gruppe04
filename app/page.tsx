@@ -6,11 +6,7 @@ import Textblock from "@/components/Textblock";
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import Fakeflix from "@/components/FakeFlix";
-
 import IntroSection from "@/components/IntroSection";
-
-
-
 // Folie Session 06, 41: Beispiel mit refs zum Scrollen zu ...
 
 
@@ -24,7 +20,6 @@ export default function Home() {
         <Hero />
       </section>
       <section>
-
         <IntroSection
             title = "Was sind Dark Patterns?"
 
@@ -42,12 +37,6 @@ export default function Home() {
 
             source = "Quelle: Verbraucherzentrale / dpa-themendienst"
          />
-      </section>
-      <section>
-
-
-        <Textblock>Test</Textblock>
-        <Textblock>Hallo</Textblock>
       </section>
       <section>
         <HorizontalScrollSection>
