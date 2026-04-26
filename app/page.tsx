@@ -47,11 +47,11 @@ export default function Home() {
             <Textblock>
               Nagging ist ein Dark Pattern, bei dem der Nutzer wiederholt und aufdringlich zu bestimmten Sachen befragt wird.
               Beispiele sind:
-              <li>
-                <ul>Coockie-Banner</ul>
-                <ul>Push-Benachrichtigung aktivieren</ul>
-                <ul>Kostenpflichtige Version abonnieren</ul>
-              </li>
+              <ul className="list-disc">
+                <li>Coockie-Banner</li>
+                <li>Push-Benachrichtigung aktivieren</li>
+                <li>Kostenpflichtige Version abonnieren</li>
+              </ul>
             </Textblock>
           </Card>
           <Card
