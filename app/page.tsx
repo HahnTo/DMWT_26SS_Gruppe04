@@ -6,7 +6,10 @@ import Textblock from "@/components/Textblock";
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import Fakeflix from "@/components/FakeFlix";
+<<<<<<< HEAD
 import IntroSection from "@/components/IntroSection";
+=======
+>>>>>>> 3c50d8ae6750a87650ac3ef7ac9d28b3a544eeaf
 // Folie Session 06, 41: Beispiel mit refs zum Scrollen zu ...
 
 
@@ -20,6 +23,7 @@ export default function Home() {
         <Hero />
       </section>
       <section>
+<<<<<<< HEAD
         <IntroSection
             title = "Was sind Dark Patterns?"
 
@@ -39,6 +43,8 @@ export default function Home() {
          />
       </section>
       <section>
+=======
+>>>>>>> 3c50d8ae6750a87650ac3ef7ac9d28b3a544eeaf
         <Textblock>Test</Textblock>
         <Textblock>Hallo</Textblock>
       </section>
