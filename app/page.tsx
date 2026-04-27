@@ -7,6 +7,7 @@ import Image from "next/image";
 import Footer from "@/components/Footer";
 import Fakeflix from "@/components/FakeFlix";
 import IntroSection from "@/components/IntroSection";
+import CommentsPage from "@/components/CommentsPage";
 // Folie Session 06, 41: Beispiel mit refs zum Scrollen zu ...
 
 
@@ -25,7 +26,7 @@ export default function Home() {
 
             intro = {`Dark Patterns sind gezielte Designstrategien in digitalen Anwendungen, die Nutzerinnen und Nutzer unbewusst beeinflussen oder zu bestimmten Handlungen lenken sollen.
             Dabei geht es oft nicht um Transparenz oder Benutzerfreundlichkeit, sondern darum, Entscheidungen im Sinne des Anbieters zu steuern. Solche Mechanismen finden sich in vielen
-            alltäglichen Interfaces – von Online-Shops über Apps bis hin zu sozialen Netzwerken. Ein typisches Beispiel ist sogenanntes 'Nagging', bei dem Nutzer wiederholt zu einer bestimmten
+            alltäglichen Interfaces - von Online-Shops über Apps bis hin zu sozialen Netzwerken. Ein typisches Beispiel ist sogenanntes 'Nagging', bei dem Nutzer wiederholt zu einer bestimmten
             Aktion gedrängt werden, etwa durch ständige Pop-ups oder Erinnerungen. Auch wenn solche Methoden auf den ersten Blick harmlos wirken, können sie langfristig das Nutzerverhalten stark
             beeinflussen. Diese Website bietet einen ersten Überblick über das Thema Dark Patterns. Sie zeigt, wie solche Designmuster funktionieren, warum sie eingesetzt werden und welche 
             Auswirkungen sie auf Nutzer haben können. Ziel ist es, ein grundlegendes Verständnis dafür zu schaffen, wie digitale Produkte gestaltet sind – und wie man manipulative Elemente erkennt.
@@ -88,6 +89,11 @@ export default function Home() {
       </section>
       <section>
         <Fakeflix></Fakeflix>
+      </section>
+      <section>
+        <CommentsPage>
+
+        </CommentsPage>
       </section>
       <section>
         <Textblock>Concluding Text</Textblock>

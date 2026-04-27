@@ -34,14 +34,11 @@ export default function Hero() {
                     takeoverDuration={0.25}
                     autoResumeDelay={3000}
                     autoRampDuration={0.6}
-                    color0="#5227FF"
-                    color1="#FF9FFC"
-                    color2="#B497CF"
                 />
             </div>
             <div className="relative z-10 flex items-center justify-center h-full">
                 <h1 className="text-4xl md:text-6xl font-[Mono]">
-                    Willkommen
+                    Dark Patterns - Wie sie manipulieren
                 </h1>
             </div>
         </div>
