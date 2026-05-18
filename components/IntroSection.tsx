@@ -13,7 +13,7 @@ type IntroSectionProps = {
 export default function IntroSection({ title, intro, subTitle, subText, source }: IntroSectionProps) {
     return (
 
-        <div className="w-full bg-background text-foreground px-10 py-16">
+        <div className="w-full text-foreground px-10 py-16">
 
             <div className="w-full mb-16">
                 <h2 className={`${manrope.className} text-4xl font-bold mb-4`}>

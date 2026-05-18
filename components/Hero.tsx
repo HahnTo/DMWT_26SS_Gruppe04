@@ -17,7 +17,7 @@ export default function Hero() {
             }
 
 
-            <div className="absolute inset-0 -z-10">
+            {/* <div className="absolute inset-0 -z-10">
                 <LiquidEther
                     colors={['#5227FF', '#FF9FFC', '#B497CF']}
                     mouseForce={20}
@@ -35,7 +35,7 @@ export default function Hero() {
                     autoResumeDelay={3000}
                     autoRampDuration={0.6}
                 />
-            </div>
+            </div> */}
             <div className="relative z-10 flex items-center justify-center h-full">
                 <h1 className="text-4xl md:text-6xl font-[Mono]">
                     Dark Patterns - Wie sie manipulieren

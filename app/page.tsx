@@ -8,12 +8,32 @@ import Footer from "@/components/Footer";
 import Fakeflix from "@/components/FakeFlix";
 import IntroSection from "@/components/IntroSection";
 import CommentsPage from "@/components/CommentsPage";
+import LiquidEther from "@/components/LiquidEther";
 // Folie Session 06, 41: Beispiel mit refs zum Scrollen zu ...
 
 
 export default function Home() {
   return (
     <div>
+      <div className="fixed inset-0 -z-10">
+        <LiquidEther
+          colors={['#5227FF', '#FF9FFC', '#B497CF']}
+          mouseForce={20}
+          cursorSize={100}
+          isViscous
+          viscous={30}
+          iterationsViscous={32}
+          iterationsPoisson={32}
+          resolution={0.5}
+          isBounce={false}
+          autoDemo
+          autoSpeed={0.5}
+          autoIntensity={2.2}
+          takeoverDuration={0.25}
+          autoResumeDelay={3000}
+          autoRampDuration={0.6}
+        />
+      </div>
       <header className="fixed w-full z-50">
         <Header />
       </header>
