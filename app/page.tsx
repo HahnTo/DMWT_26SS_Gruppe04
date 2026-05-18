@@ -88,7 +88,7 @@ export default function Home() {
         </HorizontalScrollSection>
       </section>
       <section>
-        <Fakeflix></Fakeflix>
+              <Fakeflix img="/images/streamly_prototype.png" />
       </section>
       <section>
         <CommentsPage>
