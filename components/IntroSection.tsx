@@ -1,5 +1,4 @@
 import React from "react"
-import { manrope } from "@/app/fonts"
 import InfographicPlaceholder from "./Infographic"
 
 type IntroSectionProps = {
@@ -16,10 +15,10 @@ export default function IntroSection({ title, intro, subTitle, subText, source }
         <div className="w-full text-foreground px-10 py-16">
 
             <div className="w-full mb-16">
-                <h2 className={`${manrope.className} text-4xl font-bold mb-4`}>
+                <h2 className={` text-4xl font-bold mb-4`}>
                     {title}
                 </h2>
-                <p className={`${manrope.className} text-xl`}>
+                <p className={`text-xl`}>
                     {intro}
                 </p>
             </div>
@@ -27,10 +26,10 @@ export default function IntroSection({ title, intro, subTitle, subText, source }
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
                 <div>
-                    <h3 className={`${manrope.className} text-2xl font-semibold mb-4`}>
+                    <h3 className={`text-2xl font-semibold mb-4`}>
                         {subTitle}
                     </h3>
-                    <p className={`${manrope.className} text-lg`}>
+                    <p className={` text-lg`}>
                         {subText}
                     </p>
                 </div>

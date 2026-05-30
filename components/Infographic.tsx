@@ -16,7 +16,7 @@ export default function InfographicPlaceholder({ source }: InfographicPlaceholde
                 height={600}
                 className="w-full h-auto rounded-lg"
             />
-            <p className={`${manrope.className} text-xs text-white/40 mt-2`}>
+            <p className={`text-xs text-white/40 mt-2`}>
                 {source}
             </p>
         </div>

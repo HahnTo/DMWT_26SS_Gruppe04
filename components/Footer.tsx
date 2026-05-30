@@ -1,6 +1,6 @@
 export default function Footer(){
     return (
-        <footer className="w-full bg-black text-white py-6">
+        <footer className="w-full bg-[#536E91] text-white py-6">
             <div className="max-w6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
                 <p className="text-sm">
                     © {new Date().getFullYear()} Gruppe04

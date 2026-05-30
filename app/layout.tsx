@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { manrope, welcomeDarling, roboto, raleway } from "@/app/fonts"
+
 
 
 export const metadata: Metadata = {
@@ -15,7 +17,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="de">
-      <body>
+      <body className={`
+        ${manrope.variable}
+        ${welcomeDarling.variable}
+        ${roboto.variable}
+        ${raleway.variable}
+      `}>
 
         <main>{children}</main> 
 

@@ -37,10 +37,10 @@ export default function Home() {
       <header className="fixed w-full z-50">
         <Header />
       </header>
-      <section>
+      <section id="hero">
         <Hero />
       </section>
-      <section>
+      <section id="intro">
         <IntroSection
             title = "Was sind Dark Patterns?"
 
@@ -59,7 +59,7 @@ export default function Home() {
             source = "Quelle: Verbraucherzentrale / dpa-themendienst"
          />
       </section>
-      <section>
+      <section id="cards">
         <HorizontalScrollSection>
           <Card
             title="Nagging"
@@ -76,41 +76,53 @@ export default function Home() {
             </Textblock>
           </Card>
           <Card
-            title="Card1 Titel"
+            title="Roach Motel"
             img="/images/CardPlaceholder.png"
           >
             Card text
           </Card>
           <Card
-            title="Card1 Titel"
+            title="Confirmshaming"
             img="/images/CardPlaceholder.png"
           >
             Card text
           </Card>
           <Card
-            title="Card1 Titel"
+            title="Hidden Costs"
             img="/images/CardPlaceholder.png"
           >
             Card text
           </Card>
           <Card
-            title="Card1 Titel"
+            title="Sneak into Basket"
             img="/images/CardPlaceholder.png"
           >
             Card text
           </Card>
           <Card
-            title="Card1 Titel"
+            title="Forced Continuity"
+            img="/images/CardPlaceholder.png"
+          >
+            Card text
+          </Card>
+          <Card
+            title="Countdown"
+            img="/images/CardPlaceholder.png"
+          >
+            Card text
+          </Card>
+          <Card
+            title="Misdirection"
             img="/images/CardPlaceholder.png"
           >
             Card text
           </Card>
         </HorizontalScrollSection>
       </section>
-      <section>
+      <section id="interactive">
               <Fakeflix img="/images/streamly_prototype.png" />
       </section>
-      <section>
+      <section id="comments">
         <CommentsPage>
 
         </CommentsPage>

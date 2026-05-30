@@ -69,59 +69,19 @@ export default function HorizontalScrollSection({ children }: HorizontalScrollSe
 
   return (
     <div ref={sectionRef} className="relative">
-      {/* Durch das sticky "bleibt die Website stehen" und scrollt nur horizontal */}
+      {/* Durch das sticky "bleibt die Website stehen" und scrollt nur horizontal 
+          Zwei divs Ergänzen die Cards, sodass der Rand etwas cleaner ist
+      */}
       <div className="sticky top-0 h-screen overflow-hidden">
         <div
           ref={containerRef}
           className="flex flex-row gap-6 px-8 h-full items-center overflow-hidden"
         >
+          <div className="w-[100px] shrink-0" />
           {children}
+          <div className="w-[100px] shrink-0" />
         </div>
       </div>
     </div>
   );
 }
-
-
-// In page.tsx wird es dann so verwendet (Hier um Merge Konflikte zu verhindern)
-
-{/* <section>
-        <HorizontalScrollSection>
-            <Card
-              title="Card1 Titel"
-              img="/images/CardPlaceholder.png"
-            >
-              Card text
-            </Card>
-            <Card
-              title="Card1 Titel"
-              img="/images/CardPlaceholder.png"
-            >
-              Card text
-            </Card>
-            <Card
-              title="Card1 Titel"
-              img="/images/CardPlaceholder.png"
-            >
-              Card text
-            </Card>
-            <Card
-              title="Card1 Titel"
-              img="/images/CardPlaceholder.png"
-            >
-              Card text
-            </Card>
-            <Card
-              title="Card1 Titel"
-              img="/images/CardPlaceholder.png"
-            >
-              Card text
-            </Card>
-            <Card
-              title="Card1 Titel"
-              img="/images/CardPlaceholder.png"
-            >
-              Card text
-            </Card>
-        </HorizontalScrollSection>
-      </section> */}

@@ -1,12 +1,3 @@
-import Image from "next/image";
-import React from "react";
-import Header from "./Header";
-import LiquidEther from "./LiquidEther";
-
-
-// type HeroProbs = {
-//     children: React.ReactNode;
-// }
 
 
 export default function Hero() {
