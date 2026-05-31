@@ -63,13 +63,13 @@ export default function Home() {
         <HorizontalScrollSection>
           <Card
             title="Nagging"
-            img="/images/Nagging1.png"
+            img="/images/Nagging.png"
           >
             <Textblock>
               Nagging ist ein Dark Pattern, bei dem der Nutzer wiederholt und aufdringlich zu bestimmten Sachen befragt wird.
               Beispiele sind:
               <ul className="list-disc">
-                <li>Coockie-Banner</li>
+                <li>Cookie-Banner</li>
                 <li>Push-Benachrichtigung aktivieren</li>
                 <li>Kostenpflichtige Version abonnieren</li>
               </ul>
@@ -77,45 +77,101 @@ export default function Home() {
           </Card>
           <Card
             title="Roach Motel"
-            img="/images/CardPlaceholder.png"
+            img="/images/RoachMotel.png"
           >
-            Card text
+            <Textblock>
+              Roach Motel ist ein Dark Pattern, bei dem etwas leicht abgeschlossen, aber sehr schwer wieder gekündigt werden kann.
+              Beispiele sind:
+              <ul className="list-disc">
+                <li>Abonnements, die nur per Brief kündbar sind</li>
+                <li>Deaktivierung des Accounts erfordert Kundenservice</li>
+                <li>Versteckte Kündigungsoptionen in tiefen Menüebenen</li>
+              </ul>
+            </Textblock>
           </Card>
           <Card
             title="Confirmshaming"
-            img="/images/CardPlaceholder.png"
+            img="/images/Confirmshaming.png"
           >
-            Card text
+            <Textblock>
+              Confirmshaming ist ein Dark Pattern, bei dem der Nutzer durch schuldbehaftete Formulierungen manipuliert wird, eine bestimmte Entscheidung zu treffen.
+              Beispiele sind:
+              <ul className="list-disc">
+                <li>„Nein danke, ich möchte kein Geld sparen."</li>
+                <li>„Ich verzichte auf meinen Rabatt."</li>
+                <li>Abonnement-Popups mit negativer Opt-out-Sprache</li>
+              </ul>
+            </Textblock>
           </Card>
           <Card
             title="Hidden Costs"
-            img="/images/CardPlaceholder.png"
+            img="/images/HiddenCosts.png"
           >
-            Card text
+            <Textblock>
+              Hidden Costs sind ein Dark Pattern, bei dem versteckte Zusatzkosten erst kurz vor dem Kaufabschluss angezeigt werden.
+              Beispiele sind:
+              <ul className="list-disc">
+                <li>Bearbeitungsgebühren beim Checkout</li>
+                <li>Pflichtversicherungen bei Buchungsportalen</li>
+                <li>Steuern und Versandkosten erst im letzten Schritt</li>
+              </ul>
+            </Textblock>
           </Card>
-          <Card
-            title="Sneak into Basket"
-            img="/images/CardPlaceholder.png"
+<Card
+            title="Disguised Ads"
+            img="/images/DisguisedAds.png"
           >
-            Card text
+            <Textblock>
+              Disguised Ads sind ein Dark Pattern, bei dem Werbung als redaktioneller Inhalt oder Systemmeldung getarnt wird.
+              Beispiele sind:
+              <ul className="list-disc">
+                <li>Anzeigen im Look von Suchergebnissen</li>
+                <li>Gesponserte Artikel ohne klare Kennzeichnung</li>
+                <li>Fake-Downloadbuttons auf Webseiten</li>
+              </ul>
+            </Textblock>
           </Card>
           <Card
             title="Forced Continuity"
-            img="/images/CardPlaceholder.png"
+            img="/images/ForcedContinuity.png"
           >
-            Card text
+            <Textblock>
+              Forced Continuity ist ein Dark Pattern, bei dem nach einem kostenlosen Testzeitraum automatisch kostenpflichtige Abonnements beginnen.
+              Beispiele sind:
+              <ul className="list-disc">
+                <li>Kreditkartenpflicht bei kostenloser Testphase</li>
+                <li>Keine Erinnerung vor Ende des Testzeitraums</li>
+                <li>Schwer auffindbare Kündigungsoption</li>
+              </ul>
+            </Textblock>
           </Card>
           <Card
             title="Countdown"
-            img="/images/CardPlaceholder.png"
+            img="/images/Countdown.png"
           >
-            Card text
+            <Textblock>
+              Countdown ist ein Dark Pattern, bei dem künstlicher Zeitdruck erzeugt wird, um den Nutzer zu schnellen Entscheidungen zu drängen.
+              Beispiele sind:
+              <ul className="list-disc">
+                <li>„Nur noch 2 Artikel auf Lager!"</li>
+                <li>Ablaufende Rabatt-Timer beim Checkout</li>
+                <li>„10 Personen sehen sich dieses Angebot gerade an"</li>
+              </ul>
+            </Textblock>
           </Card>
           <Card
-            title="Misdirection"
-            img="/images/CardPlaceholder.png"
+            title="Trick Questions"
+            img="/images/TrickQuestions.png"
           >
-            Card text
+            <Textblock>
+              Trick Questions sind ein Dark Pattern, bei dem verwirrend formulierte Fragen den Nutzer dazu bringen, ungewollt zuzustimmen.
+              Beispiele sind:
+              <ul className="list-disc">
+                <li>Doppelte Verneinungen in Einwilligungstexten</li>
+                <li>Vorausgewählte Checkboxen für Newsletter</li>
+                <li>Unklare Opt-in/Opt-out-Formulierungen</li>
+              </ul>
+            </Textblock>
           </Card>
         </HorizontalScrollSection>
       </section>
