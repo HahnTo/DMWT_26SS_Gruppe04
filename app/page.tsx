@@ -9,6 +9,7 @@ import Fakeflix from "@/components/FakeFlix";
 import IntroSection from "@/components/IntroSection";
 import CommentsPage from "@/components/CommentsPage";
 import LiquidEther from "@/components/LiquidEther";
+import StreamlyInteractive from "@/components/StreamlyInteractive";
 // Folie Session 06, 41: Beispiel mit refs zum Scrollen zu ...
 
 
@@ -49,14 +50,8 @@ export default function Home() {
             alltäglichen Interfaces - von Online-Shops über Apps bis hin zu sozialen Netzwerken. Ein typisches Beispiel ist sogenanntes 'Nagging', bei dem Nutzer wiederholt zu einer bestimmten
             Aktion gedrängt werden, etwa durch ständige Pop-ups oder Erinnerungen. Auch wenn solche Methoden auf den ersten Blick harmlos wirken, können sie langfristig das Nutzerverhalten stark
             beeinflussen. Diese Website bietet einen ersten Überblick über das Thema Dark Patterns. Sie zeigt, wie solche Designmuster funktionieren, warum sie eingesetzt werden und welche 
-            Auswirkungen sie auf Nutzer haben können. Ziel ist es, ein grundlegendes Verständnis dafür zu schaffen, wie digitale Produkte gestaltet sind – und wie man manipulative Elemente erkennt.
+            Auswirkungen sie auf Nutzer haben können. Ziel ist es, ein grundlegendes Verständnis dafür zu schaffen, wie digitale Produkte gestaltet sind - und wie man manipulative Elemente erkennt.
             Denn nur wer sich dieser Strategien bewusst ist, kann informierte und selbstbestimmte Entscheidungen im digitalen Raum treffen.`}
-
-            subTitle = "Warum ist das ein Problem?"
-
-            subText = "Diese Muster untergraben die Autonomie der Nutzer. Auf dieser Seite zeigen wir dir die häufigsten Techniken – damit du sie erkennst."
-
-            source = "Quelle: Verbraucherzentrale / dpa-themendienst"
          />
       </section>
       <section id="cards">
@@ -176,7 +171,10 @@ export default function Home() {
         </HorizontalScrollSection>
       </section>
       <section id="interactive">
-              <Fakeflix img="/images/streamly_prototype.png" />
+              {/* <Fakeflix img="/images/streamly_prototype.png" /> */}
+              <StreamlyInteractive>
+                
+              </StreamlyInteractive>
       </section>
       <section id="comments">
         <CommentsPage>

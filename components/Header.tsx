@@ -40,6 +40,7 @@ export default function Header() {
                     <button onClick={() => scrollToSection("hero")}>Home</button>
                     <button onClick={() => scrollToSection("intro")}>Intro</button>
                     <button onClick={() => scrollToSection("cards")}>Cards</button>
+                    <button onClick={() => scrollToSection("interactive")}>Interaktive Seite</button>
                     <button onClick={() => scrollToSection("comments")}>Comments</button>
                 </div>
             )}

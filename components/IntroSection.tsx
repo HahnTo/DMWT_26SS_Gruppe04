@@ -1,5 +1,4 @@
 import React from "react"
-import InfographicPlaceholder from "./Infographic"
 
 type IntroSectionProps = {
     title: string
