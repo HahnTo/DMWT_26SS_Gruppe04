@@ -424,7 +424,7 @@ export default function StreamlyInteractive() {
                 Alle ansehen ›
               </span>
             </div>
-            <div className="flex gap-3 overflow-x-auto pb-2">
+            <div className="flex gap-3 blue-scrollbar overflow-x-auto pb-2">
               {TOP10.map((item, i) => (
                 <ContentCard
                   key={item.title}
@@ -447,7 +447,7 @@ export default function StreamlyInteractive() {
                 Alle ansehen ›
               </span>
             </div>
-            <div className="flex gap-3 overflow-x-auto pb-2">
+            <div className="flex gap-3 blue-scrollbar overflow-x-auto pb-2">
               {TRENDING.map((item, i) => (
                 <ContentCard
                   key={item.title}

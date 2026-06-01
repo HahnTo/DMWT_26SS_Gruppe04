@@ -26,13 +26,13 @@ Folie Session 06, 30: Tailwind CSS Grid Beispiele mit Breakpoints etc
 }
 
 h1, h2, h3 {
-  font-family: var(--font-raleway);
+  font-family: var(--font-space_grotesk);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-roboto);
+  font-family: var(--font-manrope);
 }
 
 .blue-scrollbar::-webkit-scrollbar {

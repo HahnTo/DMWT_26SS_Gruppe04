@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { manrope, welcomeDarling, roboto, raleway } from "@/app/fonts"
+import { manrope, welcomeDarling, roboto, raleway, space_grotesk } from "@/app/fonts"
 
 
 
@@ -22,6 +22,7 @@ export default function RootLayout({
         ${welcomeDarling.variable}
         ${roboto.variable}
         ${raleway.variable}
+        ${space_grotesk.variable}
       `}>
 
         <main>{children}</main> 
