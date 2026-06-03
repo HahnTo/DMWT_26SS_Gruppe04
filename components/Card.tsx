@@ -1,35 +1,59 @@
-import { raleway } from "@/app/fonts"
-
+"use client";
+import React, { forwardRef } from "react";
 
 type CardProps = {
   title: string;
-  children: React.ReactNode;
   img: string;
+  active: boolean;
+  children: React.ReactNode;
 };
 
-export default function Card({ title, children, img }: CardProps) {
-  return (
-    <div className="w-1/3 h-[66%] flex-none bg-[#536E91] border border-[#525F80] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
-      
-      {/* Image Section */}
-      <div className="h-[60%] overflow-hidden">
-        <img
-          src={img}
-          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-          alt={title}
-        />
-      </div>
+const Card = forwardRef<HTMLDivElement, CardProps>(
+  ({ title, img, active, children }, ref) => {
+    return (
+      <div
+        ref={ref}
+        className={`
+          w-1/3 flex-none border rounded-2xl shadow-md
+          transition-all duration-500 ease-in-out transform-gpu will-change-transform
+          ${active
+            ? "translate-y-0 opacity-100 shadow-xl"
+            : "translate-y-6 opacity-50"}
+        `}
+      >
+        {/* Fixe Bildhöhe */}
+        <div className="h-48 w-full rounded-t-2xl overflow-hidden">
+          <img
+            src={img}
+            className="w-full h-full object-cover"
+            alt={title}
+          />
+        </div>
 
-      {/* Content Section */}
-      <div className="p-5 flex flex-col gap-3 h-[40%]">
-        <p className={`${raleway.className} text-white text-[26px] font-semibold`}>
+        <p className="text-white text-[26px] font-semibold p-4">
           {title}
         </p>
 
-        <div className="blue-scrollbar overflow-auto">
-          {children}
+        {/*
+          FESTE Höhe h-48 – ändert sich NIE.
+          Nur opacity + pointer-events wechseln → kein Layout-Shift → kein Flackern.
+        */}
+        <div className="h-48 px-5 pb-5">
+          <div
+            className={`
+              blue-scrollbar overflow-auto text-white text-sm h-full
+              transition-opacity duration-500 ease-in-out
+              ${active ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}
+            `}
+          >
+            {children}
+          </div>
         </div>
       </div>
-    </div>
-  );
-}
+    );
+  }
+);
+
+Card.displayName = "Card";
+
+export default Card;
