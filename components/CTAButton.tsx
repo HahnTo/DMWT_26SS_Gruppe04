@@ -20,7 +20,7 @@ export default function CTAButton({ targetId = "interactive", label = "Demo ausp
     <button
       ref={buttonRef}
       onClick={handleClick}
-      className="group relative mt-20 px-15 py-3.5 rounded-full border border-[#C9A84C] text-[#C9A84C] text-xl tracking-widest uppercase overflow-hidden transition-colors duration-300 hover:text-[#1a2235]"
+      className="group relative mt-20 px-15 py-3.5 rounded-full border-2 border-[#C9A84C] text-[#C9A84C] text-xl font-bold tracking-widest uppercase overflow-hidden transition-colors duration-300 hover:text-[#1a2235]"
     >
       {/* Fill sweep on hover */}
       <span

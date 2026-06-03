@@ -12,8 +12,8 @@ export default function Hero() {
                     Wie sie manipulieren
                 </h2>
                 <CtaButton 
-                    label="Teste dein Gespür"
-                    targetId="interactive"
+                    label="Erfahre mehr"
+                    targetId="intro"
                 />
             </div>
         </div>
