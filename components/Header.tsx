@@ -29,11 +29,11 @@ export default function Header() {
             />
 
             <div className="absolute text-[20px] text-[#B79864] font-bold right-10 rounded-lg p-5 flex gap-6">
-                <button onClick={() => scrollToSection("hero")} className="p-3" >Home</button>
-                <button onClick={() => scrollToSection("intro")} className="p-3" >Intro</button>
-                <button onClick={() => scrollToSection("cards")} className="p-3" >Cards</button>
-                <button onClick={() => scrollToSection("interactive")} className="p-3" >Interaktive Seite</button>
-                <button onClick={() => scrollToSection("comments")} className="p-3" >Comments</button>
+                <button onClick={() => scrollToSection("hero")} className="p-3 hover:cursor-pointer" >Home</button>
+                <button onClick={() => scrollToSection("intro")} className="p-3 hover:cursor-pointer" >Intro</button>
+                <button onClick={() => scrollToSection("cards")} className="p-3 hover:cursor-pointer" >Cards</button>
+                <button onClick={() => scrollToSection("interactive")} className="p-3 hover:cursor-pointer" >Interaktive Seite</button>
+                <button onClick={() => scrollToSection("comments")} className="p-3 hover:cursor-pointer" >Comments</button>
             </div>
         </div>
     )

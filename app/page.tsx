@@ -43,15 +43,15 @@ export default function Home() {
       </section>
       <section id="intro">
         <IntroSection
-            title = "Was sind Dark Patterns?"
+            // title = "Was sind Dark Patterns?"
 
-            intro = {`Dark Patterns sind gezielte Designstrategien in digitalen Anwendungen, die Nutzerinnen und Nutzer unbewusst beeinflussen oder zu bestimmten Handlungen lenken sollen.
-            Dabei geht es oft nicht um Transparenz oder Benutzerfreundlichkeit, sondern darum, Entscheidungen im Sinne des Anbieters zu steuern. Solche Mechanismen finden sich in vielen
-            alltäglichen Interfaces - von Online-Shops über Apps bis hin zu sozialen Netzwerken. Ein typisches Beispiel ist sogenanntes 'Nagging', bei dem Nutzer wiederholt zu einer bestimmten
-            Aktion gedrängt werden, etwa durch ständige Pop-ups oder Erinnerungen. Auch wenn solche Methoden auf den ersten Blick harmlos wirken, können sie langfristig das Nutzerverhalten stark
-            beeinflussen. Diese Website bietet einen ersten Überblick über das Thema Dark Patterns. Sie zeigt, wie solche Designmuster funktionieren, warum sie eingesetzt werden und welche 
-            Auswirkungen sie auf Nutzer haben können. Ziel ist es, ein grundlegendes Verständnis dafür zu schaffen, wie digitale Produkte gestaltet sind - und wie man manipulative Elemente erkennt.
-            Denn nur wer sich dieser Strategien bewusst ist, kann informierte und selbstbestimmte Entscheidungen im digitalen Raum treffen.`}
+            // intro = {`Dark Patterns sind gezielte Designstrategien in digitalen Anwendungen, die Nutzerinnen und Nutzer unbewusst beeinflussen oder zu bestimmten Handlungen lenken sollen.
+            // Dabei geht es oft nicht um Transparenz oder Benutzerfreundlichkeit, sondern darum, Entscheidungen im Sinne des Anbieters zu steuern. Solche Mechanismen finden sich in vielen
+            // alltäglichen Interfaces - von Online-Shops über Apps bis hin zu sozialen Netzwerken. Ein typisches Beispiel ist sogenanntes 'Nagging', bei dem Nutzer wiederholt zu einer bestimmten
+            // Aktion gedrängt werden, etwa durch ständige Pop-ups oder Erinnerungen. Auch wenn solche Methoden auf den ersten Blick harmlos wirken, können sie langfristig das Nutzerverhalten stark
+            // beeinflussen. Diese Website bietet einen ersten Überblick über das Thema Dark Patterns. Sie zeigt, wie solche Designmuster funktionieren, warum sie eingesetzt werden und welche 
+            // Auswirkungen sie auf Nutzer haben können. Ziel ist es, ein grundlegendes Verständnis dafür zu schaffen, wie digitale Produkte gestaltet sind - und wie man manipulative Elemente erkennt.
+            // Denn nur wer sich dieser Strategien bewusst ist, kann informierte und selbstbestimmte Entscheidungen im digitalen Raum treffen.`}
          />
       </section>
       <section id="cards">
