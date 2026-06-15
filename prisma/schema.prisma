@@ -7,9 +7,45 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+// Altes Comment-Model bleibt für bestehende Migrationen erhalten
 model Comment {
   id        Int      @id @default(autoincrement())
   author    String
   text      String
   createdAt DateTime @default(now())
+}
+
+// Dark Pattern Kategorien
+enum Category {
+  NAGGING
+  ROACH_MOTEL
+  HIDDEN_COSTS
+  FORCED_CONTINUITY
+  TRICK_QUESTIONS
+  DISGUISED_ADS
+  COUNTDOWN
+  CONFIRM_SHAMING
+  SONSTIGES
+}
+
+// Forum-Beitrag (Thread)
+model ForumPost {
+  id        Int      @id @default(autoincrement())
+  author    String
+  title     String
+  content   String
+  website   String?         // Betroffene Website (z.B. "Amazon", "Netflix")
+  category  Category        // Dark Pattern Kategorie
+  createdAt DateTime @default(now())
+  replies   ForumReply[]
+}
+
+// Antwort auf einen Beitrag
+model ForumReply {
+  id        Int       @id @default(autoincrement())
+  postId    Int
+  author    String
+  content   String
+  createdAt DateTime  @default(now())
+  post      ForumPost @relation(fields: [postId], references: [id], onDelete: Cascade)
 }
