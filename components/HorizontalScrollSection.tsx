@@ -6,7 +6,7 @@ type HorizontalScrollSectionProps = {
   children: React.ReactNode;
 }
 
-const scrollSpeed = 5;
+const scrollSpeed = 2;
 
 export default function HorizontalScrollSection({ children }: HorizontalScrollSectionProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -99,7 +99,7 @@ export default function HorizontalScrollSection({ children }: HorizontalScrollSe
       <div className="sticky top-0 h-screen overflow-hidden">
         <div
           ref={containerRef}
-          className="flex flex-row gap-6 px-130 h-full items-center overflow-hidden"
+          className="flex flex-row gap-6 px-[33%] h-full items-center overflow-hidden"
         >
           <div className="w-[100px] shrink-0" />
 

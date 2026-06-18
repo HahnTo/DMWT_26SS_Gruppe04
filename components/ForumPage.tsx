@@ -182,7 +182,7 @@ export default function ForumPage() {
           Community Forum
         </h2>
         <p className="text-gray-300 text-lg">
-          Teilt eure Erfahrungen mit Dark Patterns – welche Websites fallen euch auf?
+          Teilt eure Erfahrungen mit Dark Patterns. Welche Websites fallen euch auf?
         </p>
       </div>
 
@@ -272,7 +272,7 @@ export default function ForumPage() {
                 onChange={e => setNpContent(e.target.value)}
                 required
                 rows={4}
-                placeholder="Beschreibe das Dark Pattern so genau wie möglich – was hast du erlebt? Wo? Wie hat es dich beeinflusst?"
+                placeholder="Beschreibe das Dark Pattern so genau wie möglich. Was hast du erlebt? Wo? Wie hat es dich beeinflusst?"
                 className="w-full rounded-lg bg-white/10 border border-white/20 px-3 py-2 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#5227FF] resize-none"
               />
             </div>
@@ -302,7 +302,7 @@ export default function ForumPage() {
         ) : visiblePosts.length === 0 ? (
           <div className="text-center py-16 rounded-2xl bg-white/5 border border-white/10 text-gray-400">
             <p className="text-lg">Noch keine Beiträge in dieser Kategorie.</p>
-            <p className="text-sm mt-1">Sei die Erste – teile deine Erfahrung!</p>
+            <p className="text-sm mt-1">Sei die Erste, teile deine Erfahrung!</p>
           </div>
         ) : (
           visiblePosts.map(post => {
@@ -326,7 +326,7 @@ export default function ForumPage() {
                         </span>
                         {post.website && (
                           <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-[#536E91]/60 text-blue-200">
-                            🌐 {post.website}
+                            {post.website}
                           </span>
                         )}
                       </div>

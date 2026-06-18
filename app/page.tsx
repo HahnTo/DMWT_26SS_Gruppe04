@@ -10,6 +10,7 @@ import IntroSection from "@/components/IntroSection";
 import CommentsPage from "@/components/CommentsPage";
 import LiquidEther from "@/components/LiquidEther";
 import StreamlyInteractive from "@/components/StreamlyInteractive";
+import ForumPage from "@/components/ForumPage";
 // Folie Session 06, 41: Beispiel mit refs zum Scrollen zu ...
 
 
@@ -42,17 +43,7 @@ export default function Home() {
         <Hero />
       </section>
       <section id="intro">
-        <IntroSection
-            // title = "Was sind Dark Patterns?"
-
-            // intro = {`Dark Patterns sind gezielte Designstrategien in digitalen Anwendungen, die Nutzerinnen und Nutzer unbewusst beeinflussen oder zu bestimmten Handlungen lenken sollen.
-            // Dabei geht es oft nicht um Transparenz oder Benutzerfreundlichkeit, sondern darum, Entscheidungen im Sinne des Anbieters zu steuern. Solche Mechanismen finden sich in vielen
-            // alltäglichen Interfaces - von Online-Shops über Apps bis hin zu sozialen Netzwerken. Ein typisches Beispiel ist sogenanntes 'Nagging', bei dem Nutzer wiederholt zu einer bestimmten
-            // Aktion gedrängt werden, etwa durch ständige Pop-ups oder Erinnerungen. Auch wenn solche Methoden auf den ersten Blick harmlos wirken, können sie langfristig das Nutzerverhalten stark
-            // beeinflussen. Diese Website bietet einen ersten Überblick über das Thema Dark Patterns. Sie zeigt, wie solche Designmuster funktionieren, warum sie eingesetzt werden und welche 
-            // Auswirkungen sie auf Nutzer haben können. Ziel ist es, ein grundlegendes Verständnis dafür zu schaffen, wie digitale Produkte gestaltet sind - und wie man manipulative Elemente erkennt.
-            // Denn nur wer sich dieser Strategien bewusst ist, kann informierte und selbstbestimmte Entscheidungen im digitalen Raum treffen.`}
-         />
+        <IntroSection />
       </section>
       <section id="cards">
         <HorizontalScrollSection>
@@ -112,7 +103,7 @@ export default function Home() {
               </ul>
             </Textblock>
           </Card>
-<Card
+          <Card
             title="Disguised Ads"
             img="/images/DisguisedAds.png"
           >
@@ -171,15 +162,13 @@ export default function Home() {
         </HorizontalScrollSection>
       </section>
       <section id="interactive">
-              {/* <Fakeflix img="/images/streamly_prototype.png" /> */}
-              <StreamlyInteractive>
-                
-              </StreamlyInteractive>
+        <StreamlyInteractive />
+      </section>
+      <section id="forum">
+        <ForumPage />
       </section>
       <section id="comments">
-        <CommentsPage>
-
-        </CommentsPage>
+        <CommentsPage />
       </section>
       <section>
         <Textblock>Concluding Text</Textblock>

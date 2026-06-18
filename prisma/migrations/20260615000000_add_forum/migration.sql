@@ -33,3 +33,21 @@ CREATE TABLE "ForumReply" (
     FOREIGN KEY ("postId") REFERENCES "ForumPost"("id")
     ON DELETE CASCADE
 );
+
+INSERT INTO "ForumPost"
+("author", "title", "content", "website", "category")
+VALUES
+(
+  'Tobias',
+  'Titel 1',
+  'Inhalt 1',
+  'https://example.com',
+  'NAGGING'
+),
+(
+  'Anna',
+  'Titel 2',
+  'Inhalt 2',
+  'https://example.com',
+  'HIDDEN_COSTS'
+);
