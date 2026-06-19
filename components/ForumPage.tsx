@@ -167,9 +167,7 @@ export default function ForumPage() {
 
   // ── Gefilterte Posts ──────────────────────────────────────────────────────
 
-  const visiblePosts = filterCat === 'ALL'
-    ? posts
-    : posts.filter(p => p.category === filterCat)
+  const visiblePosts = filterCat === 'ALL' ? posts : posts.filter(p => p.category === filterCat)
 
   // ── Render ────────────────────────────────────────────────────────────────
 
@@ -364,7 +362,7 @@ export default function ForumPage() {
                               {reply.author}
                               <span className="text-gray-500 font-normal ml-2">{formatDate(reply.createdAt)}</span>
                             </p>
-                            <p className="text-gray-200 text-sm whitespace-pre-wrap">{reply.content}</p>
+                            <p className="text-gray-200 text-sm mb-8 whitespace-pre-wrap">{reply.content}</p>
                           </div>
                         ))}
                       </div>

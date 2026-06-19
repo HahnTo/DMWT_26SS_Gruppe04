@@ -21,7 +21,7 @@ export async function POST(request: Request) {
     const body = await request.json()
     const author   = body.author?.trim()
     const title    = body.title?.trim()
-    const content  = body.content?.trim()
+    const content  = body.content?.trim().replace(/\s+/g, ' ');
     const website  = body.website?.trim() || null
     const category = body.category as Category
 
