@@ -1,39 +1,42 @@
 -- Dark Pattern Kategorien als Enum
 
--- Vorhandene Objekte entfernen
-DROP TABLE IF EXISTS "ForumReply";
-DROP TABLE IF EXISTS "ForumPost";
-DROP TYPE IF EXISTS "Category";
 
+DO $$ BEGIN
+  CREATE TYPE "Category" AS ENUM (
+    'NAGGING',
+    'ROACH_MOTEL',
+    'CONFIRM_SHAMING',
+    'HIDDEN_COSTS',
+    'DISGUISED_ADS',
+    'FORCED_CONTINUITY',
+    'COUNTDOWN',
+    'TRICK_QUESTIONS',
+    'PRESELECTION',
+    'FALSE_SOCIAL_PROOF',
+    'SONSTIGES'
+  );
+EXCEPTION
+  WHEN duplicate_object THEN NULL;
+END $$;
 
-
-CREATE TYPE "Category" AS ENUM (
-  'NAGGING',
-  'ROACH_MOTEL',
-  'CONFIRM_SHAMING',
-  'HIDDEN_COSTS',
-  'DISGUISED_ADS',
-  'FORCED_CONTINUITY',
-  'COUNTDOWN',
-  'TRICK_QUESTIONS',
-  'PRESELECTION',
-  'FALSE_SOCIAL_PROOF',
-  'SONSTIGES'
-);
 
 -- Forum-Beiträge (Threads)
-CREATE TABLE "ForumPost" (
+CREATE TABLE IF NOT EXISTS "ForumPost" (
   "id"        SERIAL PRIMARY KEY,
   "author"    TEXT NOT NULL,
   "title"     TEXT NOT NULL,
   "content"   TEXT NOT NULL,
   "website"   TEXT,
   "category"  "Category" NOT NULL,
-  "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP
+  "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+  CONSTRAINT "ForumPost_author_content_key"
+    UNIQUE ("author", "content")
 );
 
+
 -- Antworten auf Beiträge
-CREATE TABLE "ForumReply" (
+CREATE TABLE IF NOT EXISTS "ForumReply" (
   "id"        SERIAL PRIMARY KEY,
   "postId"    INTEGER NOT NULL,
   "author"    TEXT NOT NULL,
@@ -41,8 +44,11 @@ CREATE TABLE "ForumReply" (
   "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
   CONSTRAINT "ForumReply_postId_fkey"
     FOREIGN KEY ("postId") REFERENCES "ForumPost"("id")
-    ON DELETE CASCADE
+    ON DELETE CASCADE,
+  CONSTRAINT "ForumReply_author_content_key"
+    UNIQUE ("author", "content")
 );
+
 
 INSERT INTO "ForumPost"
 ("author", "title", "content", "website", "category")
@@ -81,7 +87,8 @@ Den Opt-out zu finden war auch alles andere als einfach, weil die Einstellung ti
   'Ich wollte bei Uber Eats was bestellen und dachte der Preis ist ja gut. Doch dann im Warenkorb kamen plötzlich Servicekosten dazu. Eine Frechheit',
   'https://www.ubereats.com/',
   'HIDDEN_COSTS'
-);
+)
+ON CONFLICT ("author", "content") DO NOTHING;
 
 
 INSERT INTO "ForumReply"
@@ -121,7 +128,5 @@ VALUES
   '4',
   'Lilly',
   'Ich sehe das wie Daniel, man kann auch übertreiben.'
-);
-
-
-select author, id from "ForumPost";
+)
+ON CONFLICT ("author", "content") DO NOTHING;
