@@ -162,7 +162,7 @@ export default function Home() {
           </Card>
           <Card
             title="False Social Proof"
-            img=""
+            img="/images/FalseSocialProof.png"
           >
             <Textblock>
               False Social Proof zeigt Nutzern übertrieben oder gefälschte Statistiken. 
@@ -176,7 +176,7 @@ export default function Home() {
           </Card>
           <Card
             title="Preselection"
-            img=""
+            img="/images/Preselection.png"
           >
             <Textblock>
               Preselection ist ein Dark Pattern, bei dem Optionen voreingestellt sind. 
