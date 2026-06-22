@@ -11,6 +11,7 @@ import CommentsPage from "@/components/CommentsPage";
 import LiquidEther from "@/components/LiquidEther";
 import StreamlyInteractive from "@/components/StreamlyInteractive";
 import ForumPage from "@/components/ForumPage";
+import ConcludingSection from "@/components/ConcludingSection";
 // Folie Session 06, 41: Beispiel mit refs zum Scrollen zu ...
 
 const cardListClassNames = "list-disc text-[16px] pt-[20px]";
@@ -193,11 +194,11 @@ export default function Home() {
       <section id="interactive">
         <StreamlyInteractive />
       </section>
+            <section id="concluding">
+        <ConcludingSection />
+      </section>
       <section id="forum">
         <ForumPage />
-      </section>
-      <section>
-        <Textblock>Concluding Text</Textblock>
       </section>
       <Footer></Footer>
     </div>

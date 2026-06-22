@@ -23,7 +23,7 @@ export default function Header() {
         <div className="relative z-10 flex items-center justify-center h-20 w-full p-5 bg-[#536E91]/50 backdrop-blur-sm">
 
             <img
-                src="/images/Logo_test.png"
+                src="/images/favicon_spinnennetz.png"
                 className="absolute left-5 w-12 h-12" alt="Test"
                 onClick={() => scrollToSection("hero")}
             />
