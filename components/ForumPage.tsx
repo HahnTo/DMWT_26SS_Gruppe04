@@ -13,6 +13,8 @@ type Category =
   | 'DISGUISED_ADS'
   | 'COUNTDOWN'
   | 'CONFIRM_SHAMING'
+  | 'PRESELECTION'
+  | 'FALSE_SOCIAL_PROOF'
   | 'SONSTIGES'
 
 type Reply = {
@@ -37,15 +39,17 @@ type ForumPost = {
 // ─── Hilfsfunktionen ─────────────────────────────────────────────────────────
 
 const CATEGORY_LABELS: Record<Category, string> = {
-  NAGGING:          'Nagging',
-  ROACH_MOTEL:      'Roach Motel',
-  HIDDEN_COSTS:     'Hidden Costs',
-  FORCED_CONTINUITY:'Forced Continuity',
-  TRICK_QUESTIONS:  'Trick Questions',
-  DISGUISED_ADS:    'Disguised Ads',
-  COUNTDOWN:        'Countdown / Scarcity',
-  CONFIRM_SHAMING:  'Confirmshaming',
-  SONSTIGES:        'Sonstiges',
+  NAGGING:            'Nagging',
+  ROACH_MOTEL:        'Roach Motel',
+  HIDDEN_COSTS:       'Hidden Costs',
+  FORCED_CONTINUITY:  'Forced Continuity',
+  TRICK_QUESTIONS:    'Trick Questions',
+  DISGUISED_ADS:      'Disguised Ads',
+  COUNTDOWN:          'Countdown / Scarcity',
+  CONFIRM_SHAMING:    'Confirmshaming',
+  PRESELECTION:       'Preselection',
+  FALSE_SOCIAL_PROOF: 'False Social Proof',
+  SONSTIGES:          'Sonstiges',
 }
 
 // Jede Kategorie bekommt eine eigene Farbe (passend zum dunklen Design)
@@ -58,6 +62,8 @@ const CATEGORY_COLORS: Record<Category, string> = {
   DISGUISED_ADS:     'bg-green-800/60 text-green-200',
   COUNTDOWN:         'bg-pink-700/60 text-pink-200',
   CONFIRM_SHAMING:   'bg-teal-700/60 text-teal-200',
+  PRESELECTION:      'bg-indigo-700/60 text-indigo-200',
+  FALSE_SOCIAL_PROOF:'bg-cyan-700/60 text-cyan-200',
   SONSTIGES:         'bg-gray-600/60 text-gray-200',
 }
 
