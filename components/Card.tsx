@@ -17,9 +17,9 @@ export default function Card({ title, children, img, isActive = false }: CardPro
         transition-all duration-500 ease-in-out
         ${isActive
           // Active card: wider, taller, full shadow — text section auto-expands to fit content
-          ? 'w-[480px] shadow-2xl'
+          ? 'w-[50vh] h-[75vh] shadow-2xl'
           // Inactive cards: narrower, image takes all the space, text hidden
-          : 'w-[300px] h-[400px] shadow-md'
+          : 'w-[30vh] h-[40vh] shadow-md'
         }
       `}
     >
