@@ -197,7 +197,7 @@ export default function ForumPage() {
         <select
           value={filterCat}
           onChange={e => setFilterCat(e.target.value as Category | 'ALL')}
-          className="px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-[#5227FF]"
+          className="px-4 py-2 rounded-lg bg-[#202532] border border-white/20 text-white backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-[#5227FF]"
         >
           <option value="ALL">Alle Kategorien</option>
           {(Object.keys(CATEGORY_LABELS) as Category[]).map(cat => (

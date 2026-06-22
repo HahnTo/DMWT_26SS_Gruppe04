@@ -5,7 +5,6 @@ import HorizontalScrollSection from "@/components/HorizontalScrollSection";
 import Textblock from "@/components/Textblock";
 import Image from "next/image";
 import Footer from "@/components/Footer";
-import Fakeflix from "@/components/FakeFlix";
 import IntroSection from "@/components/IntroSection";
 import CommentsPage from "@/components/CommentsPage";
 import LiquidEther from "@/components/LiquidEther";

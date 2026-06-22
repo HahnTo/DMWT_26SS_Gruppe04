@@ -17,19 +17,19 @@ const DARK_PATTERNS: Record<DropZoneId, DarkPatternInfo> = {
     name: "Countdown Timer / False Urgency",
     category: "Dringlichkeitstrick",
     description:
-      "Ein Countdown suggeriert, das Angebot laufe gleich ab – oft wird er aber einfach neu gestartet oder das Angebot ist dauerhaft verfügbar. Ziel: impulsive Kaufentscheidung provozieren.",
+      "Ein Countdown suggeriert, das Angebot laufe gleich ab. Oft wird er aber einfach neu gestartet oder das Angebot ist dauerhaft verfügbar. Ziel: impulsive Kaufentscheidung provozieren.",
   },
   preselect: {
     name: "Preselection / Vorauswahl",
     category: "Täuschende Voreinstellung",
     description:
-      "Der teuerste Plan ist vorausgewählt. Günstigere Alternativen erfordern aktives Umschalten – viele Nutzer:innen übernehmen die Voreinstellung unreflektiert.",
+      "Der teuerste Plan ist vorausgewählt. Günstigere Alternativen erfordern aktives Umschalten. Viele Nutzer:innen übernehmen die Voreinstellung unreflektiert.",
   },
   trick_question: {
     name: "Trick Question",
     category: "Verwirrende Formulierung",
     description:
-      "Die Opt-out-Box 'Ich möchte keine Marketingkommunikation erhalten' ist doppelt negativ. Wer sie ankreuzt, denkt er lehnt ab – wählt aber tatsächlich aus, keine Abmeldung zu wünschen.",
+      "Die Opt-out-Box 'Ich möchte keine Marketingkommunikation erhalten' ist doppelt negativ. Wer sie ankreuzt, denkt er lehnt ab, Wählt aber tatsächlich aus, keine Abmeldung zu wünschen.",
   },
   hidden_costs: {
     name: "Hidden Costs / Versteckte Kosten",
@@ -47,7 +47,7 @@ const DARK_PATTERNS: Record<DropZoneId, DarkPatternInfo> = {
     name: "Roach Motel",
     category: "Erschwerter Ausstieg",
     description:
-      "Das Abo ist leicht abzuschließen, aber die Kündigung erfordert einen Brief – absichtlich bürokratisch, um Abbrüche zu verhindern.",
+      "Das Abo ist leicht abzuschließen, aber die Kündigung erfordert einen Brief, absichtlich bürokratisch, um Abbrüche zu verhindern.",
   },
 };
 
@@ -110,13 +110,12 @@ function ContentCard({
       </div>
       {badge && (
         <span
-          className={`absolute top-1 left-1 text-[9px] font-bold px-1.5 py-0.5 rounded ${
-            badge === "ORIGINAL"
+          className={`absolute top-1 left-1 text-[9px] font-bold px-1.5 py-0.5 rounded ${badge === "ORIGINAL"
               ? "bg-orange-500 text-white"
               : badge === "EXKLUSIV"
-              ? "bg-purple-600 text-white"
-              : "bg-green-500 text-white"
-          }`}
+                ? "bg-purple-600 text-white"
+                : "bg-green-500 text-white"
+            }`}
         >
           {badge}
         </span>
@@ -146,13 +145,12 @@ function TargetZone({
   return (
     <div
       ref={(el) => registerRef(id, el)}
-      className={`absolute rounded-md pointer-events-none transition-all duration-300 ${
-        reveal
+      className={`absolute rounded-md pointer-events-none transition-all duration-300 ${reveal
           ? isHit
             ? "ring-2 ring-emerald-400 bg-emerald-400/10"
             : "ring-2 ring-rose-400 bg-rose-400/10"
           : ""
-      } ${className}`}
+        } ${className}`}
     />
   );
 }
@@ -178,21 +176,21 @@ function DragChip({
     resultState === "correct"
       ? "border-emerald-400 bg-emerald-950/90 ring-2 ring-emerald-400"
       : resultState === "wrong"
-      ? "border-rose-400 bg-rose-950/90 ring-2 ring-rose-400"
-      : isDragging
-      ? "border-amber-400 bg-gray-900 ring-2 ring-amber-400 scale-105"
-      : "border-gray-700 bg-gray-900 hover:border-amber-400 hover:bg-gray-800";
+        ? "border-rose-400 bg-rose-950/90 ring-2 ring-rose-400"
+        : isDragging
+          ? "border-amber-400 bg-gray-900 ring-2 ring-amber-400 scale-105"
+          : "border-gray-700 bg-gray-900 hover:border-amber-400 hover:bg-gray-800";
 
   // When placed: position:absolute inside the relative drag-container,
   // with left/top in container-relative coords. When in the rail: normal flow.
   const style: React.CSSProperties = pos
     ? {
-        position: "absolute",
-        left: pos.x,
-        top: pos.y,
-        zIndex: isDragging ? 1000 : 500,
-        touchAction: "none",
-      }
+      position: "absolute",
+      left: pos.x,
+      top: pos.y,
+      zIndex: isDragging ? 1000 : 500,
+      touchAction: "none",
+    }
     : { touchAction: "none" };
 
   return (
@@ -317,7 +315,7 @@ export default function StreamlyInteractive() {
         ...prev,
         [current]: {
           x: e.clientX - containerRect.left - dragOffset.current.x,
-          y: e.clientY - containerRect.top  - dragOffset.current.y,
+          y: e.clientY - containerRect.top - dragOffset.current.y,
         },
       }));
       return current;
@@ -355,7 +353,7 @@ export default function StreamlyInteractive() {
       const containerRect = container?.getBoundingClientRect() ?? { left: 0, top: 0 };
       dragOffset.current = {
         x: e.clientX - containerRect.left - currentPos.x,
-        y: e.clientY - containerRect.top  - currentPos.y,
+        y: e.clientY - containerRect.top - currentPos.y,
       };
     } else if (chipEl && container) {
       // First pickup from the rail: the chip is in normal flow.
@@ -364,7 +362,7 @@ export default function StreamlyInteractive() {
       const chipRect = chipEl.getBoundingClientRect();
       const containerRect = container.getBoundingClientRect();
       const initialX = chipRect.left - containerRect.left;
-      const initialY = chipRect.top  - containerRect.top;
+      const initialY = chipRect.top - containerRect.top;
       // dragOffset: where inside the chip the pointer landed (viewport-space
       // delta; containerRect will be subtracted in pointermove, so keeping
       // this as a raw pixel offset from chip origin works correctly).
@@ -414,7 +412,16 @@ export default function StreamlyInteractive() {
     setResults(newResults);
     setShowResult(true);
     setTimeout(() => {
-      resultRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      const el = resultRef.current;
+      if (!el) return;
+
+      const headerOffset = 80; // ggf. an deine Navbar-Höhe anpassen
+      const elementPosition = el.getBoundingClientRect().top + window.scrollY;
+
+      window.scrollTo({
+        top: elementPosition - headerOffset,
+        behavior: "smooth",
+      });
     }, 100);
   }
 
@@ -499,11 +506,10 @@ export default function StreamlyInteractive() {
           <button
             onClick={handleCheck}
             disabled={!allPlaced || showResult}
-            className={`mt-2 w-full font-bold py-3 rounded-lg text-sm transition-colors ${
-              allPlaced && !showResult
+            className={`mt-2 w-full font-bold py-3 rounded-lg text-sm transition-colors ${allPlaced && !showResult
                 ? "bg-amber-400 text-black hover:bg-amber-300"
                 : "bg-gray-800 text-gray-500 cursor-not-allowed"
-            }`}
+              }`}
           >
             {showResult ? "Überprüft" : "Überprüfen"}
           </button>
@@ -560,8 +566,7 @@ export default function StreamlyInteractive() {
                 style={{ zIndex: 998 }}
                 className="absolute inset-0 flex items-center justify-center bg-black/70 p-4"
               >
-                <div className="bg-gray-900 border border-green-700 rounded-2xl max-w-sm w-full p-6 text-center">
-                  <div className="text-5xl mb-3">🎉</div>
+                <div className="bg-gray-900 border-2 border-white/15 rounded-2xl max-w-sm w-full p-6 text-center">
                   <h3 className="text-white font-bold text-lg mb-2">Willkommen bei Streamly!</h3>
                   <p className="text-gray-400 text-sm mb-1">
                     Du hast <strong className="text-white">{planDetails[plan].label}</strong> abonniert.
@@ -584,24 +589,18 @@ export default function StreamlyInteractive() {
             {bannerVisible && (
               <div className="relative bg-red-700 flex items-center justify-center gap-4 px-4 py-2.5 text-sm font-medium">
                 <span className="flex items-center gap-2">
-                  ⚡ <strong>Blitzangebot endet in</strong>
+                  <strong>Blitzangebot endet in</strong>
                 </span>
                 <span className="bg-black text-white font-mono font-bold px-3 py-0.5 rounded">
                   {mm}:{ss}
                 </span>
                 <span>— Premium für nur <strong>€2,99</strong> im ersten Monat</span>
-                <button
-                  onClick={() => setBannerVisible(false)}
-                  className="absolute right-3 text-white/60 hover:text-white text-lg leading-none"
-                >
-                  ✕
-                </button>
                 <TargetZone
                   id="countdown"
                   reveal={showResult}
                   isHit={!!results?.countdown}
                   registerRef={registerTargetRef}
-                  className="left-1/2 -translate-x-1/2 top-0.5 bottom-0.5 w-24"
+                  className="-inset-2 left-1/2 -translate-x-1/2"
                 />
               </div>
             )}
@@ -642,7 +641,7 @@ export default function StreamlyInteractive() {
                         reveal={showResult}
                         isHit={!!results?.social_proof}
                         registerRef={registerTargetRef}
-                        className="-inset-1 -left-1 w-[calc(100%+0.5rem)]"
+                        className="-inset-4"
                       />
                     </div>
                     <h1 className="text-7xl font-black leading-none tracking-tight">
@@ -715,9 +714,8 @@ export default function StreamlyInteractive() {
                       <div
                         key={p}
                         onClick={() => setPlan(p)}
-                        className={`flex items-center gap-3 p-3 rounded-lg border cursor-pointer mb-2 transition-colors ${
-                          selected ? "border-red-500 bg-gray-800" : "border-gray-700 hover:border-gray-500"
-                        }`}
+                        className={`flex items-center gap-3 p-3 rounded-lg border cursor-pointer mb-2 transition-colors ${selected ? "border-red-500 bg-gray-800" : "border-gray-700 hover:border-gray-500"
+                          }`}
                       >
                         <div className={`w-4 h-4 rounded-full border-2 flex-shrink-0 ${selected ? "border-red-500 bg-red-500" : "border-gray-600"}`} />
                         <div className="flex-1 min-w-0">
@@ -741,10 +739,9 @@ export default function StreamlyInteractive() {
                     reveal={showResult}
                     isHit={!!results?.preselect}
                     registerRef={registerTargetRef}
-                    className="left-0 right-0 top-7 h-[58px]"
+                    className="-inset-2"
                   />
                 </div>
-
                 {/* Consents */}
                 <div>
                   <p className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">Einstellungen</p>
@@ -763,14 +760,14 @@ export default function StreamlyInteractive() {
                   <label className="relative flex items-start gap-2 cursor-pointer">
                     <input type="checkbox" checked={consent3} onChange={(e) => setConsent3(e.target.checked)} className="mt-0.5 accent-red-500" />
                     <span className="text-gray-600 text-[10px] leading-snug">
-                      Ich möchte keine Marketingkommunikation erhalten (Opt-out)
+                      Ich möchte keine Marketingkommunikation erhalten
                     </span>
                     <TargetZone
                       id="trick_question"
                       reveal={showResult}
                       isHit={!!results?.trick_question}
                       registerRef={registerTargetRef}
-                      className="-inset-1 left-0 right-0 w-[calc(100%+0.5rem)]"
+                      className="-inset-4"
                     />
                   </label>
                 </div>
@@ -792,7 +789,7 @@ export default function StreamlyInteractive() {
                     reveal={showResult}
                     isHit={!!results?.hidden_costs}
                     registerRef={registerTargetRef}
-                    className="inset-1"
+                    className="-inset-1"
                   />
                 </div>
 
@@ -817,7 +814,7 @@ export default function StreamlyInteractive() {
                     reveal={showResult}
                     isHit={!!results?.roach_motel}
                     registerRef={registerTargetRef}
-                    className="inset-0"
+                    className="-inset-2"
                   />
                 </div>
               </aside>
@@ -863,9 +860,8 @@ export default function StreamlyInteractive() {
               return (
                 <div
                   key={id}
-                  className={`rounded-xl border p-4 ${
-                    isCorrect ? "border-emerald-700 bg-emerald-950/30" : "border-rose-700 bg-rose-950/30"
-                  }`}
+                  className={`rounded-xl border p-4 ${isCorrect ? "border-emerald-700 bg-emerald-950/30" : "border-rose-700 bg-rose-950/30"
+                    }`}
                 >
                   <div className="flex items-center gap-2 mb-1.5">
                     <span className={`text-sm ${isCorrect ? "text-emerald-400" : "text-rose-400"}`}>
