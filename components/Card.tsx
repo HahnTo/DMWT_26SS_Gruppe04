@@ -44,7 +44,7 @@ export default function Card({ title, children, img, isActive = false }: CardPro
           ${isActive ? 'py-5 max-h-[600px] opacity-100' : 'py-3 max-h-[60px] opacity-60'}
         `}
       >
-        <p className={`${raleway.className} text-white font-semibold transition-all duration-500 ${isActive ? 'text-[24px]' : 'text-[16px]'}`}>
+        <p className={`${raleway.className} text-white font-semibold transition-all duration-500 ${isActive ? 'text-[28px]' : 'text-[24px]'}`}>
           {title}
         </p>
 
