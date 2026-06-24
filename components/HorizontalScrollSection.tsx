@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useEffect, useState, Children, cloneElement, isValidElement } from 'react';
+import { ArrowDown } from 'lucide-react';
 
 type HorizontalScrollSectionProps = {
   children: React.ReactNode;
@@ -53,13 +54,13 @@ export default function HorizontalScrollSection({ children }: HorizontalScrollSe
       const sectionHeight = section.offsetHeight;
       const scrollY = window.scrollY;
 
-      const scrollProgress = Math.max(
+      const progress = Math.max(
         0,
         Math.min(1, (scrollY - sectionTop) / (sectionHeight - window.innerHeight))
       );
 
       const maxScrollLeft = container.scrollWidth - container.clientWidth;
-      container.scrollLeft = scrollProgress * maxScrollLeft;
+      container.scrollLeft = progress * maxScrollLeft;
 
       updateActiveCard();
     };
@@ -97,6 +98,18 @@ export default function HorizontalScrollSection({ children }: HorizontalScrollSe
   return (
     <div ref={sectionRef} className="relative">
       <div className="sticky top-0 h-screen overflow-hidden">
+
+        {/* Pfeil nach unten + CTA erscheint bei der letzten Card */}
+        <div className={`absolute right-[10%] top-1/2 -translate-y-1/2 flex flex-col items-center gap-4 transition-all duration-500 ${activeIndex === childArray.length - 1 ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+          <ArrowDown className="w-18 h-18 text-white animate-bounce" />
+          <button
+            onClick={() => document.getElementById('interactive')?.scrollIntoView({ behavior: 'smooth' })}
+            className="flex items-center gap-2 px-5 py-3 rounded-xl bg-[#B79864] text-white font-semibold text-xl hover:bg-[#c9aa74] transition-colors duration-200"
+          >
+            Teste dich jetzt
+          </button>
+        </div>
+
         <div
           ref={containerRef}
           className="flex flex-row gap-6 px-[33%] h-full items-center overflow-hidden"

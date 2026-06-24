@@ -1,26 +1,5 @@
-// import React from "react"
 
-// type IntroSectionProps = {
-//     title: string
-//     intro: string
-// }
-
-// export default function IntroSection({ title, intro, }: IntroSectionProps) {
-//     return (
-//         <div className="w-full text-foreground px-10 py-16">
-
-//             <div className="w-full mb-16">
-//                 <h2 className="text-4xl font-bold mb-4 text-center">
-//                     {title}
-//                 </h2>
-//                 <p className="text-xl text-left">
-//                     {intro}
-//                 </p>
-//             </div>
-
-//         </div>
-//     )
-// }
+import { ChevronDown } from "lucide-react";
 
 export default function IntroSection() {
   return (
@@ -69,6 +48,12 @@ export default function IntroSection() {
           </p>
         </div>
 
+      </div>
+
+      {/* Scroll animation, dass man weiß das es weiter geht*/}
+      <div className="flex flex-col items-center gap-2 mt-20 text-white/50">
+        <span className="text-xl tracking-widest uppercase">Scroll</span>
+        <ChevronDown className="w-10 h-10 animate-bounce" />
       </div>
     </section>
   );
