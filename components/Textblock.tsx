@@ -8,7 +8,7 @@ type TextblockProbs = {
 
 export default function Textblock({ children, className }: TextblockProbs) {
     return (
-        <div className="flex items-center justify-center h-auto p-10 leading-relaxed">
+        <div className="flex items-center justify-center h-auto p-4 leading-relaxed">
             <div className={`text-xl ${className}`} >
                 {children}
             </div>

@@ -13,47 +13,33 @@ export default function Card({ title, children, img, isActive = false }: CardPro
   return (
     <div
       className={`
-        flex-none bg-[#536E91] border border-[#525F80] rounded-2xl overflow-hidden shadow-md
-        transition-all duration-500 ease-in-out
+        flex-none flex flex-col bg-[#536E91] border-3 border-[#525F80] rounded-2xl overflow-hidden transition-all duration-500 ease-in-out
         ${isActive
-          // Active card: wider, taller, full shadow — text section auto-expands to fit content
-          ? 'w-[50vh] h-[75vh] shadow-2xl'
-          // Inactive cards: narrower, image takes all the space, text hidden
-          : 'w-[30vh] h-[40vh] shadow-md'
+          ? 'w-[65vh] h-[75vh]'
+          : 'w-[40vh] h-[40vh]'
         }
       `}
     >
-      {/* Image */}
-      <div
-        className={`
-          overflow-hidden transition-all duration-500
-          ${isActive ? 'h-[275px]' : 'h-[200px]'}
-        `}
-      >
+      {/* Image — grows to fill all available space above the content */}
+      <div className="flex-1 min-h-0 overflow-hidden transition-all duration-500">
         <img
           src={img}
-          className="w-full h-full object-cover transition-transform duration-500"
+          className={"w-full h-full object-contain transition-transform duration-500"}
           alt={title}
         />
       </div>
 
-      {/* Content — always rendered, but only fully visible on active card */}
+      {/* Content — pinned to bottom, never compressed */}
       <div
-        className={`
-          flex flex-col gap-3 px-5 overflow-hidden transition-all duration-500
-          ${isActive ? 'py-5 max-h-[600px] opacity-100' : 'py-3 max-h-[60px] opacity-60'}
-        `}
+        className={`shrink-0 flex flex-col px-5 transition-all duration-500 ${isActive ? 'py-5 opacity-100' : 'py-3 opacity-60'}`}
       >
-        <p className={`${raleway.className} text-white font-semibold transition-all duration-500 ${isActive ? 'text-[28px]' : 'text-[24px]'}`}>
+        <p className={`${raleway.className} text-white font-semibold transition-all duration-500 ${isActive ? 'text-[2.5vh]' : 'text-[2vh]'}`}>
           {title}
         </p>
 
-        {/* Text only visible on active card — no inner scroll needed */}
+        {/* Text only visible on active card — collapsed (no height) on inactive */}
         <div
-          className={`
-            transition-all duration-500 text-sm leading-relaxed
-            ${isActive ? 'opacity-100' : 'opacity-0 pointer-events-none'}
-          `}
+          className={`transition-all duration-500 text-[1.5vh] leading-relaxed overflow-hidden ${isActive ? 'max-h-[600px] opacity-100 translate-y-0 mt-2' : 'max-h-0 opacity-0 translate-y-4 pointer-events-none'}`}
         >
           {children}
         </div>

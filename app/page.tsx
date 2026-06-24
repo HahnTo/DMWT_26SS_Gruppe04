@@ -13,7 +13,7 @@ import ForumPage from "@/components/ForumPage";
 import ConcludingSection from "@/components/ConcludingSection";
 // Folie Session 06, 41: Beispiel mit refs zum Scrollen zu ...
 
-const cardListClassNames = "list-disc text-[16px] pt-[20px]";
+const cardListClassNames = "list-disc pl-5 text-[16px] pt-[20px]";
 
 export default function Home() {
   return (
