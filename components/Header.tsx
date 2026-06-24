@@ -22,11 +22,13 @@ export default function Header() {
     return (
         <div className="relative z-10 flex items-center justify-center h-20 w-full p-5 bg-[#536E91]/50 backdrop-blur-sm">
 
-            <img
-                src="/images/favicon_spinnennetz.png"
-                className="absolute left-5 w-12 h-12" alt="Test"
+            <div
+                className="absolute left-5 flex items-center gap-3 cursor-pointer"
                 onClick={() => scrollToSection("hero")}
-            />
+            >
+                <img src="/images/favicon_spinnennetz.png" className="w-12 h-12" alt="MusterDetektiv Logo" />
+                <span className="text-[#B79864] font-bold text-[20px]">MusterDetektiv</span>
+            </div>
 
             <div className="absolute text-[20px] text-[#B79864] font-bold right-10 rounded-lg p-5 flex gap-6">
                 <button onClick={() => scrollToSection("hero")} className="p-3 hover:cursor-pointer" >Start</button>
