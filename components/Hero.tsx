@@ -8,28 +8,28 @@ import CtaButton from "./CTAButton";
 const CONFIGS = [
   // FalseSocialProof — left → right (hf0)
   { src: "/images/FalseSocialProof_background.png", x:  -2, y: 14,  size: 20, dur: 28, delay: 0,    anim: 0 },
-  { src: "/images/FalseSocialProof_background.png", x: -22, y: 38,  size: 17, dur: 24, delay: 9.3,  anim: 0 },
-  { src: "/images/FalseSocialProof_background.png", x:  50, y: 70,  size: 22, dur: 34, delay: 18.7, anim: 0 },
+  { src: "/images/FalseSocialProof_background.png", x: -22, y: 38,  size: 17, dur: 24, delay: 9,  anim: 0 },
+  { src: "/images/FalseSocialProof_background.png", x:  -50, y: 70,  size: 22, dur: 34, delay: 6, anim: 0 },
 
   // HiddenCosts — right → left (hf1)
-  { src: "/images/HiddenCosts_background.png",      x: 110, y: 48,  size: 17, dur: 35, delay: 8,    anim: 1 },
-  { src: "/images/HiddenCosts_background.png",      x: 110, y: 18,  size: 14, dur: 30, delay: 19.7, anim: 1 },
-  { src: "/images/HiddenCosts_background.png",      x: 110, y: 72,  size: 19, dur: 40, delay: 31.3, anim: 1 },
+  { src: "/images/HiddenCosts_background.png",      x: 50, y: 48,  size: 17, dur: 35, delay: 0,    anim: 1 },
+  { src: "/images/HiddenCosts_background.png",      x: 10, y: 18,  size: 14, dur: 30, delay: 0, anim: 1 },
+  { src: "/images/HiddenCosts_background.png",      x: 110, y: 72,  size: 19, dur: 40, delay: 3, anim: 1 },
 
   // Nagging — top → bottom-right (hf2)
-  { src: "/images/Nagging_background.png",          x: 15,  y: -22, size: 22, dur: 33, delay: 4,    anim: 2 },
-  { src: "/images/Nagging_background.png",          x: 42,  y: -22, size: 18, dur: 30, delay: 14,   anim: 2 },
-  { src: "/images/Nagging_background.png",          x: 68,  y: -22, size: 24, dur: 26, delay: 24,   anim: 2 },
+  { src: "/images/Nagging_background.png",          x: 15,  y: -22, size: 22, dur: 33, delay: 6,    anim: 2 },
+  { src: "/images/Nagging_background.png",          x: 42,  y: -22, size: 18, dur: 30, delay: 12,   anim: 2 },
+  { src: "/images/Nagging_background.png",          x: 68,  y: -22, size: 24, dur: 26, delay: 4,   anim: 2 },
 
   // RoachMotel — bottom → top-left (hf3)
   { src: "/images/RoachMotel_background.png",       x: 70,  y: -10, size: 18, dur: 33, delay: 12,   anim: 3 },
-  { src: "/images/RoachMotel_background.png",       x: 30,  y: 100, size: 14, dur: 30, delay: 23,   anim: 3 },
-  { src: "/images/RoachMotel_background.png",       x: 54,  y:  80, size: 21, dur: 28, delay: 34,   anim: 3 },
+  { src: "/images/RoachMotel_background.png",       x: 30,  y: 100, size: 14, dur: 30, delay: 5,   anim: 3 },
+  { src: "/images/RoachMotel_background.png",       x: 54,  y:  80, size: 21, dur: 28, delay: 0,   anim: 3 },
 
   // TrickQuestions — left → right (hf4)
   { src: "/images/TrickQuestions_background.png",   x: 100, y: 60,  size: 16, dur: 22, delay: 6,    anim: 4 },
-  { src: "/images/TrickQuestions_background.png",   x:   0, y: 25,  size: 13, dur: 28, delay: 14.7, anim: 4 },
-  { src: "/images/TrickQuestions_background.png",   x: -18, y: 82,  size: 18, dur: 34, delay: 23.3, anim: 4 },
+  { src: "/images/TrickQuestions_background.png",   x: -100, y: 25,  size: 13, dur: 28, delay: 4, anim: 4 },
+  { src: "/images/TrickQuestions_background.png",   x: -18, y: 82,  size: 18, dur: 34, delay: 2, anim: 4 },
 ];
 
 const KEYFRAMES = `
