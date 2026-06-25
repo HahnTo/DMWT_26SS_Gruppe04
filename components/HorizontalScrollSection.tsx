@@ -103,7 +103,13 @@ export default function HorizontalScrollSection({ children }: HorizontalScrollSe
         <div className={`absolute right-[10%] top-1/2 -translate-y-1/2 flex flex-col items-center gap-4 transition-all duration-500 ${activeIndex === childArray.length - 1 ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
           <ArrowDown className="w-18 h-18 text-white animate-bounce" />
           <button
-            onClick={() => document.getElementById('interactive')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => {
+              const el = document.getElementById('interactive');
+              if (el) {
+                const top = el.getBoundingClientRect().top + window.scrollY - 80;
+                window.scrollTo({ top, behavior: 'smooth' });
+              }
+            }}
             className="flex items-center gap-2 px-5 py-3 rounded-xl bg-[#B79864] text-white font-semibold text-xl hover:bg-[#c9aa74] transition-colors duration-200"
           >
             Teste dich jetzt

@@ -1,21 +1,13 @@
 "use client";
 
-import React, { useState } from "react"
-
-
-// type HeaderProbs = {
-//     children: React.ReactNode;
-// }
-
 export default function Header() {
 
-    const [open, setOpen] = useState(false);
 
-    const scrollToSection = (id: string) => {
+    const scrollToSection = (id: string, space: number = 0) => {
         const el = document.getElementById(id);
         if (el) {
-            el.scrollIntoView({ behavior: "smooth" });
-            setOpen(false);
+            const top = el.getBoundingClientRect().top + window.scrollY - space;
+            window.scrollTo({ top, behavior: 'smooth' });
         }
     };
 
@@ -34,9 +26,10 @@ export default function Header() {
                 <button onClick={() => scrollToSection("hero")} className="p-3 hover:cursor-pointer" >Start</button>
                 <button onClick={() => scrollToSection("intro")} className="p-3 hover:cursor-pointer" >Intro</button>
                 <button onClick={() => scrollToSection("cards")} className="p-3 hover:cursor-pointer" >Patterns</button>
-                <button onClick={() => scrollToSection("interactive")} className="p-3 hover:cursor-pointer" >Teste dich</button>
+                <button onClick={() => scrollToSection("interactive", 80)} className="p-3 hover:cursor-pointer" >Teste dich</button>
                 <button onClick={() => scrollToSection("forum")} className="p-3 hover:cursor-pointer" >Forum</button>
             </div>
         </div>
     )
 }
+
