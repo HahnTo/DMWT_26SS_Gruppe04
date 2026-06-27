@@ -29,7 +29,7 @@ const DARK_PATTERNS: Record<DropZoneId, DarkPatternInfo> = {
     name: "Trick Question",
     category: "Verwirrende Formulierung",
     description:
-      "Die Opt-out-Box 'Ich möchte keine Marketingkommunikation erhalten' ist doppelt negativ. Wer sie ankreuzt, denkt er lehnt ab, Wählt aber tatsächlich aus, keine Abmeldung zu wünschen.",
+      "Die Opt-out-Box 'Ich möchte nicht, dass ich keine Marketingkommunikation erhalte.' ist doppelt negativ. Wer sie ankreuzt, denkt er lehnt ab, wählt aber tatsächlich aus, keine Abmeldung zu wünschen.",
   },
   hidden_costs: {
     name: "Hidden Costs / Versteckte Kosten",
@@ -760,7 +760,7 @@ export default function StreamlyInteractive() {
                   <label className="relative flex items-start gap-2 cursor-pointer">
                     <input type="checkbox" checked={consent3} onChange={(e) => setConsent3(e.target.checked)} className="mt-0.5 accent-red-500" />
                     <span className="text-gray-600 text-[10px] leading-snug">
-                      Ich möchte keine Marketingkommunikation erhalten
+                      Ich möchte nicht, dass ich keine Marketingkommunikation erhalte
                     </span>
                     <TargetZone
                       id="trick_question"
