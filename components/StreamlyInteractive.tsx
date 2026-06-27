@@ -311,11 +311,16 @@ export default function StreamlyInteractive() {
       const container = dragContainerRef.current;
       if (!container) return current;
       const containerRect = container.getBoundingClientRect();
+      const chipEl = chipRefs.current[current];
+      const chipW = chipEl?.offsetWidth ?? 224;
+      const chipH = chipEl?.offsetHeight ?? 58;
+      const rawX = e.clientX - containerRect.left - dragOffset.current.x;
+      const rawY = e.clientY - containerRect.top - dragOffset.current.y;
       setChipPos((prev) => ({
         ...prev,
         [current]: {
-          x: e.clientX - containerRect.left - dragOffset.current.x,
-          y: e.clientY - containerRect.top - dragOffset.current.y,
+          x: Math.max(0, Math.min(rawX, containerRect.width - chipW)),
+          y: Math.max(0, Math.min(rawY, containerRect.height - chipH)),
         },
       }));
       return current;
