@@ -19,7 +19,6 @@ export default function Header() {
                 onClick={() => scrollToSection("hero")}
             >
                 <img src="/images/favicon_spinnennetz.png" className="w-12 h-12" alt="MusterDetektiv Logo" />
-                <span className="text-[#B79864] font-bold text-[20px]">MusterDetektiv</span>
             </div>
 
             <div className="absolute text-[20px] text-[#B79864] font-bold right-10 rounded-lg p-5 flex gap-6">

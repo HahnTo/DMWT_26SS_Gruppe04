@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { manrope, welcomeDarling, roboto, raleway, space_grotesk } from "@/app/fonts"
+import { manrope, raleway, space_grotesk } from "@/app/fonts"
 
 
 
@@ -19,8 +19,6 @@ export default function RootLayout({
     <html lang="de">
       <body className={`
         ${manrope.variable}
-        ${welcomeDarling.variable}
-        ${roboto.variable}
         ${raleway.variable}
         ${space_grotesk.variable}
       `}>

@@ -3,15 +3,12 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import HorizontalScrollSection from "@/components/HorizontalScrollSection";
 import Textblock from "@/components/Textblock";
-import Image from "next/image";
 import Footer from "@/components/Footer";
 import IntroSection from "@/components/IntroSection";
-import CommentsPage from "@/components/CommentsPage";
 import LiquidEther from "@/components/LiquidEther";
 import StreamlyInteractive from "@/components/StreamlyInteractive";
 import ForumPage from "@/components/ForumPage";
 import ConcludingSection from "@/components/ConcludingSection";
-// Folie Session 06, 41: Beispiel mit refs zum Scrollen zu ...
 
 const cardListClassNames = "list-disc pl-5 text-[16px] pt-[20px]";
 
