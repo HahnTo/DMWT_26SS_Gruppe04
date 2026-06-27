@@ -5,8 +5,8 @@ import { manrope, raleway, space_grotesk } from "@/app/fonts"
 
 
 export const metadata: Metadata = {
-  title: "Meine App",
-  description: "Beschreibung",
+  title: "Dark Patterns",
+  description: "",
 };
 
 
